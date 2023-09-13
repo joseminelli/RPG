@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #282828;
+    color: #fff;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+input {
+    background-color: transparent !important;
+}
+
+hr {
+    border-top: 1px solid #a2a2a2;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: left;
+}
+
+h1.title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+h2.grid-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'character character character character'
+        'details details details details'
+        'attributes attributes attributes attributes'
+        'combat combat combat combat'
+        'expertise2 expertise2 expertise2 expertise2';
+    grid-gap: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.border {
+    background-color: #a2a2a21b;
+    border-radius: 25px;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+.box {
+    background: #000;
+}
+
+.details {
+    grid-area: details;
+    height: auto;
+}
+
+.character {
+    grid-area: character;
+    width: auto;
+}
+
+.characterHeader {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.characterPhoto {
+    border: solid;
+    border-width: 2px;
+    border-color: #a2a2a2;
+    border-radius: 50%;
+}
+
+.dice {
+    height: 80px;
+    margin-top: 18px;
+}
+
+.attributes {
+    grid-area: attributes;
+}
+
+.expertise {
+    grid-area: expertise;
+    height: 400px;
+}
+
+.expertise2 {
+    grid-area: expertise2;
+    height: 400px;
+}
+
+
+.combat {
+    grid-area: combat;
+    height: 400px;
+}
+
+.combat .grid-title {
+    flex: 1;
+}
+
+.combat .combatHeader {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.combat .combatHeader button {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font-size: 22px;
+    background: #282828;
+    border: 0.1px solid #a2a2a2;
+    margin-right: 50px;
+}
+
+table.weapons {
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-end: auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+table.weapons tr:first-child {
+    border-bottom: 2px solid #a2a2a2;
+}
+
+table.weapons tr {
+    border-bottom: 0.1px solid #a2a2a2;
+}
+
+table.weapons th {
+    text-align: center;
+    height: 25px;
+    width: 10%;
+}
+
+table.weapons td {
+    text-align: center;
+    height: 35px;
+}
+
+table.weapons td input {
+    text-align: center;
+    width: 65%;
+    border-bottom: 0.1px solid #a2a2a2;
+}
+
+table.weapons td select {
+    font-size: 16px;
+}
+
+
+table.weapons td button {
+    color: #fff;
+    background: #282828;
+}
+
+.trashcan {
+    color: white;
+    width: 15px;
+    font-size: 17px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+
+    margin-inline: 20px;
+}
+.inputs2{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    margin-inline: 20px;
+}
+
+.inputs2 h4{
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid#a2a2a2;
+
+    padding: 3px 4px;
+    margin-bottom: 10px;
+    background-color: #282828;
+    color: #fff;
+
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+select {
+    border: none;
+    border-bottom: 2px solid#a2a2a2;
+
+    padding: 3px 4px;
+    margin-bottom: 10px;
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+select:focus {
+    outline: none;
+}
+
+/* INICIO BARS */
+
+.bars {
+    padding-top: 12px;
+}
+
+.bar {
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.barcount {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.contentSanityBar {
+    align-self: end;
+    width: 100%;
+    border-radius: 5px;
+    background-color: grey;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.sanity {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.sanityDice {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+}
+
+.bars .checkboxs {
+    text-align: center;
+}
+
+.bars .checkboxs label {
+    margin-right: 10px;
+}
+
+.lifeBar {
+    /* width: 50%; */
+    height: 25px;
+    background-color: #640101;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sanityBar {
+    width: 50%;
+    height: 25px;
+    background-color: #011b64;
+    border-radius: 5px;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* FIM BARS */
+
+.extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 1px 15px;
+}
+
+.extra p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.extra input {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+.extra .damage {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.extra .body {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.extra .exposure {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.attributes .attributesList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.attributes .attribute {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 111px;
+}
+
+.attribute img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+}
+
+.attribute a {
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.attribute a:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.attribute input {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0 0 0 / 62%);
+    transition: all 0.5s ease-in-out;
+}
+
+.formModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content {
+    border-radius: 15px;
+    text-align: center;
+    margin: 15% auto;
+    padding: 20px;
+    width: 20%;
+}
+
+.modal-content h2 {
+    font-size: 40px;
+}
+
+.modal-content p {
+    font-size: 30px;
+}
+
+.modal-content input {
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-content input[type=submit] {
+    margin-top: 12px;
+    margin-bottom: 0px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1px 20px 1px;
+}
+
+.with-input .modal-content {
+    width: 40%;
+}
+#addWeapon{
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 90%;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 22px;
+    background: #282828;
+    border: 0.1px solid #a2a2a29d;
+    margin-right: 50px;
+}
+
+.with-input#addWeaponModal .modal-content {
+    width: 70%;
+}
+
+.modalDice {
+    height: 120px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 1342px) {
+    .container {
+        width: 62%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .container {
+        width: 40%;
+    }
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type="checkbox"]+label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+input[type="checkbox"]+label:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    bottom: 2px;
+    border: solid 0.1px #a2a2a2;
+    vertical-align: bottom;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked+label:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: 6px;
+    width: 4px;
+    height: 7px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#subInput{
+    display: flex;
+    flex-direction: row;
+}
+#subInput input {
+    width: 30%;
+}
+@media screen and (max-width: 800px) {
+    .inputs {
+        display: flex;
+        flex-direction: column;
+    
+        margin-inline: 20px;
+    }
+    .inputs2{
+        justify-content: center;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: row;
+        margin-inline: 0px;
+    }
+    #subInput{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .inputs2 input {
+        width: 60% !important;
+    }
+    .inputs2 h4{
+        font-size: 15px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .character {
+        grid-area: character;
+        margin-left: 15%;
+        width: 70%;
+    }
+    .details {
+        grid-area: details;
+        margin-left: 13%;
+        width: 70%;
+    }
+    .attributes {
+        grid-area: attributes;
+        margin-left: 13%;
+        width: 70%;
+    }
+    .combat {
+        grid-area: combat;
+        margin-left: 13%;
+        width: 70%;
+        display: none;
+    }
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+            'character character  '
+            'details details  '
+            'attributes attributes  '
+            'combat combat  ';
+        grid-gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+    }
+    .border {
+        background-color: #a2a2a21b;
+        border-radius: 25px;
+        padding: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    .extra{
+        padding: 1px 0px;
+        margin-top: 25px;
+        margin-inline: -20px;
+    }
+    .extra p {
+        font-size: 15px;
+    }
+}

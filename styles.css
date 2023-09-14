@@ -253,7 +253,6 @@ select:focus {
     outline: none;
 }
 
-/* INICIO BARS */
 
 .bars {
     padding-top: 12px;
@@ -304,7 +303,6 @@ select:focus {
 }
 
 .lifeBar {
-    /* width: 50%; */
     height: 25px;
     background-color: #640101;
     transition: width 2s;
@@ -326,7 +324,6 @@ select:focus {
     text-align: center;
 }
 
-/* FIM BARS */
 
 .extra {
     display: flex;

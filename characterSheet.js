@@ -6,6 +6,7 @@ const data = {
   sex: "",
   birthplace: "",
   residence: "",
+  raca: "",
 
   life: {
     current: 12,
@@ -124,6 +125,8 @@ $("#age").val(data.age);
 $("#sex").val(data.sex);
 $("#birthplace").val(data.birthplace);
 $("#residence").val(data.residence);
+$("#raca").val(data.raca);
+
 
 $(".lifeBar").css(
   "width",
@@ -364,7 +367,7 @@ function deleteWeapon(id) {
 }
 
 $("#save").click(function () {
-  if(($(".disabled").length == 1) && $("#name").val() != "" && $("#player").val() != "" && $("#occupation").val() != "" && $("#age").val() != 0 && $("#sex").val() != "" && $("#birthplace").val() != "" && $("#residence").val() != "" && $("#strength").val() != "" && $("#peso").val() != "" && $("#velMax").val() != "" && $("#alquimia").val() != "" && $("#maldicoes").val() != "" && $("#cajados").val() != "" && $("#varinhas").val() != "" && $("#inv").val() != "" && $("#aparencia").val() != "" && $("#historia").val() != "")
+  if(($(".disabled").length == 1) && $("#name").val() != "" && $("#player").val() != "" && $("#occupation").val() != "" && $("#age").val() != 0 && $("#sex").val() != "" && $("#raca").val() != "" && $("#birthplace").val() != "" && $("#residence").val() != "" && $("#strength").val() != "" && $("#peso").val() != "" && $("#velMax").val() != "" && $("#alquimia").val() != "" && $("#maldicoes").val() != "" && $("#cajados").val() != "" && $("#varinhas").val() != "" && $("#inv").val() != "" && $("#aparencia").val() != "" && $("#historia").val() != "")
   {
     alert("Personagem salvo com sucesso!");
     return;

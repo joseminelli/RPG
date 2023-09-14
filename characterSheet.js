@@ -25,7 +25,7 @@ const data = {
       numCurrent: 1,
       numMax: 1,
       attack: 5,
-      reach: "10 m",
+      reach: "10",
       defect: 1,
       area: "",
     },

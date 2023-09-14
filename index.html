@@ -19,7 +19,7 @@
     <!-- ----------------modal-------------------- -->
     <div id="diceAttributes" class="modal">
       <div class="modal-content">
-        <img class="  " src="./img/dado.png" alt="Dado" />
+        <img class="modalDice" src="./img/dado.png" alt="Dado" />
         <h2 id="diceNumber"></h2>
         <p id="diceType"></p>
       </div>
@@ -157,9 +157,9 @@
             </div>
             <div id="subInput">
               <h4>Peso</h4>
-              <input type="text" name="size" id="size" value="" />
+              <input type="text" name="size" id="peso" value="" />
               <h4>Vel. max</h4>
-              <input type="number" name="dexterity" id="dexterity" value="" />
+              <input type="number" name="dexterity" id="velMax" value="" />
             </div>
           </div>
         </div>
@@ -207,19 +207,19 @@
         <div class="extra">
           <div class="damage">
             <p>Alquimia</p>
-            <input type="number" name="damage" id="damage" />
+            <input type="number" name="Alquimia" id="alquimia" />
           </div>
           <div class="body">
             <p>Maldições</p>
-            <input type="number" name="damage" id="corpo" />
+            <input type="number" name="Maldições" id="maldicoes" />
           </div>
           <div class="exposure">
             <p>Cajados</p>
-            <input type="number" name="damage" id="expo" />
+            <input type="number" name="Cajados" id="cajados" />
           </div>
           <div class="exposure">
             <p>Varinhas</p>
-            <input type="number" name="damage" id="expo" />
+            <input type="number" name="Varinhas" id="varinhas" />
           </div>
         </div>
       </div>
@@ -250,8 +250,29 @@
           </tr>
         </table>
       </div>
+      <div class="sobre border">
+        <h2 class="grid-title">SOBRE</h2>
+        <hr />
+        <div id="areas">
+          <div class="txtareadiv">
+            <p>Inventário</p>
+            <textarea name="about" id="inv" cols="30" rows="10"></textarea>
+          </div>
+          <div class="txtareadiv">
+            <p>Aparência</p>
+            <textarea name="" id="aparencia" cols="30" rows="10"></textarea>
+          </div>
+          <div class="txtareadiv">
+            <p>História</p>
+            <textarea name="about" id="historia" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div class="buttons">
+      <button id="save">Salvar</button>
+    </div>
     <script src="characterSheet.js"></script>
   </body>
 </html>

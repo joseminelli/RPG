@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -58,7 +60,8 @@ h2.grid-title {
         'details details details details'
         'attributes attributes attributes attributes'
         'combat combat combat combat'
-        'expertise2 expertise2 expertise2 expertise2';
+        'expertise2 expertise2 expertise2 expertise2'
+        'sobre sobre sobre sobre';
     grid-gap: 30px;
 
     margin-left: auto;
@@ -400,9 +403,31 @@ select:focus {
     font-size: 18px;
     align-self: center;
 }
-
-/* The Modal (background) */
-
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.buttons button{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5a5a5a;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.buttons button:hover{
+    background-color: #434343;
+    color: #c8c8c8;
+}
 .modal {
     display: none;
     position: fixed;
@@ -422,7 +447,32 @@ select:focus {
     flex-direction: column;
     align-items: center;
 }
-
+.sobre{
+    grid-area: sobre;
+}
+.txtareadiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sobre #areas   {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#areas textarea{
+    resize: none;
+    background-color: #5a5a5a;
+    color: #fff;
+    padding: 5px;
+    margin-inline: 2%;
+    max-width: 90%;
+    height: 500px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
 .modal-content {
     border-radius: 15px;
     text-align: center;
@@ -473,7 +523,7 @@ select:focus {
 }
 
 .modalDice {
-    height: 120px;
+    height: 100px;
     -webkit-transition: -webkit-transform .8s ease-in-out;
     transition: transform .8s ease-in-out;
 }
@@ -546,6 +596,21 @@ input[type="checkbox"]:checked+label:after {
     width: 30%;
 }
 @media screen and (max-width: 800px) {
+    #areas textarea{
+        resize: none;
+        background-color: #5a5a5a;
+        color: #fff;
+        padding: 5px;
+        margin-inline: 2%;
+        max-width: 150%;
+        height: 500px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+    .sobre{
+        margin-left: 13%;
+        width: 70%;
+    }
     .inputs {
         display: flex;
         flex-direction: column;
@@ -602,7 +667,8 @@ input[type="checkbox"]:checked+label:after {
             'character character  '
             'details details  '
             'attributes attributes  '
-            'combat combat  ';
+            'combat combat  '
+            'sobre sobre ';
         grid-gap: 30px;
         margin-left: auto;
         margin-right: auto;

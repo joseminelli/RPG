@@ -34,7 +34,7 @@ const data = {
       damage: "1d10",
       numCurrent: "",
       numMax: "",
-      attack: "1/2",
+      attack: "1",
       reach: "",
       defect: 1,
       area: "",
@@ -192,64 +192,21 @@ async function rollAtribute(attribute, input) {
     diceModal.css("display", "none");
     $("#diceNumber").text("");
     $("#diceType").text("");
-
     $(".modalDice").css("transform", "rotate(0deg)");
     $(".modalDice").css("-webkit-transform", "rotate(0deg)");
   }, 20000);
 }
 
 $(".lifeBar").click(function () {
-  console.log(this);
   lifeModal.css("display", "block");
 });
 
 $(".sanityBar").click(function () {
-  console.log(this);
   sanityModal.css("display", "block");
 });
 
 $("#addWeapon").click(function () {
   openModal("#addWeaponModal");
-});
-
-$("#lesion").change(function () {
-  if (this.checked) {
-    console.log("Modo lesionamento grave ativado!");
-  } else {
-    console.log("Modo lesionamento grave desativado!");
-  }
-});
-
-$("#injury").change(function () {
-  if (this.checked) {
-    console.log("Modo lesionamento ativado!");
-  } else {
-    console.log("Modo lesionado desativado!");
-  }
-});
-
-$("#dying").change(function () {
-  if (this.checked) {
-    console.log("Modo morrendo ativado!");
-  } else {
-    console.log("Modo morrendo desativado!");
-  }
-});
-
-$("#traumatized").change(function () {
-  if (this.checked) {
-    console.log("Modo traumatizado ativado!");
-  } else {
-    console.log("Modo traumatizado desativado!");
-  }
-});
-
-$("#crazed").change(function () {
-  if (this.checked) {
-    console.log("Modo enlouquecido ativado!");
-  } else {
-    console.log("Modo enlouquecido desativado!");
-  }
 });
 
 $("#addWeaponForm").submit(function (event) {
@@ -400,9 +357,18 @@ $(".attributeDice").on("click", async function () {
   if($(this).hasClass("disabled")) return;
   rollAtribute(attribute, input);
   $(this).addClass("disabled");
-  //console.log($(".disabled").length);
 });
 
 function deleteWeapon(id) {
   $(`tr#weapon_${id}`).remove();
 }
+
+$("#save").click(function () {
+  if(($(".disabled").length == 1) && $("#name").val() != "" && $("#player").val() != "" && $("#occupation").val() != "" && $("#age").val() != 0 && $("#sex").val() != "" && $("#birthplace").val() != "" && $("#residence").val() != "" && $("#strength").val() != "" && $("#peso").val() != "" && $("#velMax").val() != "" && $("#alquimia").val() != "" && $("#maldicoes").val() != "" && $("#cajados").val() != "" && $("#varinhas").val() != "" && $("#inv").val() != "" && $("#aparencia").val() != "" && $("#historia").val() != "")
+  {
+    alert("Personagem salvo com sucesso!");
+    return;
+  } else {
+    alert("Você precisa rolar todos os atributos!");
+  }
+});

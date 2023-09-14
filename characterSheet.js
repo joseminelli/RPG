@@ -197,7 +197,7 @@ async function rollAtribute(attribute, input) {
     $("#diceType").text("");
     $(".modalDice").css("transform", "rotate(0deg)");
     $(".modalDice").css("-webkit-transform", "rotate(0deg)");
-  }, 20000);
+  }, 7000);
 }
 
 $(".lifeBar").click(function () {
